@@ -6,6 +6,7 @@ public class PhoneBook {
     protected HashMap<String, Long> myPhoneBook = new HashMap<>();
 
     public int add(String name, long proneNumber) {
-        return 0;
+        myPhoneBook.put(name, proneNumber);
+        return myPhoneBook.size();
     }
 }
