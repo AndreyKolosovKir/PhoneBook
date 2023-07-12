@@ -21,7 +21,14 @@ public class PhoneBook {
         return name;
     }
 
-    public Long findByName (){
-        return null;
+    public Long findByName(String name, HashMap<String, Long> myPhoneBook) {
+        Long number = null;
+        for (Map.Entry<String, Long> item : myPhoneBook.entrySet()) {
+            if (name == item.getKey()) {
+                number = item.getValue();
+                break;
+            }
+        }
+        return number;
     }
 }

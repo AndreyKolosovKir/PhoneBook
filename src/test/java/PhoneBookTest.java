@@ -39,7 +39,7 @@ public class PhoneBookTest {
     }
 
     @Test
-    public void testFindByName(){
+    public void testFindByName() {
         PhoneBook phoneBook = new PhoneBook();
         String name1 = "Karl1";
         long number1 = 89995556688L;
@@ -49,7 +49,7 @@ public class PhoneBookTest {
 
         Long expected = 89995556688L;
 
-        Long result = phoneBook.findByName();
+        Long result = phoneBook.findByName("Karl1", test);
 
         Assertions.assertEquals(expected, result);
     }
