@@ -20,4 +20,8 @@ public class PhoneBook {
         }
         return name;
     }
+
+    public Long findByName (){
+        return null;
+    }
 }

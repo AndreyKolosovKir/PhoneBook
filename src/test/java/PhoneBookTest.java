@@ -37,4 +37,20 @@ public class PhoneBookTest {
 
         Assertions.assertEquals(expected, result);
     }
+
+    @Test
+    public void testFindByName(){
+        PhoneBook phoneBook = new PhoneBook();
+        String name1 = "Karl1";
+        long number1 = 89995556688L;
+        HashMap<String, Long> test = new HashMap<>();
+        phoneBook.add(name1, number1, test);
+
+
+        Long expected = 89995556688L;
+
+        Long result = phoneBook.findByName();
+
+        Assertions.assertEquals(expected, result);
+    }
 }
