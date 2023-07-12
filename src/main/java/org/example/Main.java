@@ -7,5 +7,7 @@ public class Main {
         HashMap<String, Long> myPhoneBook = new HashMap<>();
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.add("Karl1", 89995556688L, myPhoneBook);
+        String name = phoneBook.findByNumber(89995556688L, myPhoneBook);
+        System.out.println(name);
     }
 }

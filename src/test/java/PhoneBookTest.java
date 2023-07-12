@@ -33,7 +33,7 @@ public class PhoneBookTest {
 
         String expected = "Karl1";
 
-        String result = phoneBook.findByNumber();
+        String result = phoneBook.findByNumber(89995556688L, test);
 
         Assertions.assertEquals(expected, result);
     }

@@ -10,7 +10,14 @@ public class PhoneBook {
         return myPhoneBook.size();
     }
 
-    public String findByNumber() {
-        return null;
+    public String findByNumber(long proneNumber, HashMap<String, Long> myPhoneBook) {
+        String name = null;
+        for (Map.Entry<String, Long> item : myPhoneBook.entrySet()) {
+            if (proneNumber == item.getValue()) {
+                name = item.getKey();
+                break;
+            }
+        }
+        return name;
     }
 }
