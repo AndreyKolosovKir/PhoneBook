@@ -66,7 +66,7 @@ public class PhoneBookTest {
 
         List namesExpected = Arrays.asList("Karl1");
 
-        List namesResult = phoneBook.printAllNames();
+        List namesResult = phoneBook.printAllNames(test);
 
         Assertions.assertEquals(namesExpected, namesResult);
     }

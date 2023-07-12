@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,7 +34,12 @@ public class PhoneBook {
         return number;
     }
 
-    public List printAllNames (){
-        return null;
+    public List printAllNames(HashMap<String, Long> myPhoneBook) {
+        List<String> names = new ArrayList<>();
+        for (Map.Entry<String, Long> item : myPhoneBook.entrySet()) {
+            names.add(item.getKey());
+            System.out.println(item.getKey() + ", ");
+        }
+        return names;
     }
 }
