@@ -2,7 +2,9 @@ import org.example.PhoneBook;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class PhoneBookTest {
@@ -52,5 +54,20 @@ public class PhoneBookTest {
         Long result = phoneBook.findByName("Karl1", test);
 
         Assertions.assertEquals(expected, result);
+    }
+
+    @Test
+    public void testPrintAllNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        String name1 = "Karl1";
+        long number1 = 89995556688L;
+        HashMap<String, Long> test = new HashMap<>();
+        phoneBook.add(name1, number1, test);
+
+        List namesExpected = Arrays.asList("Karl1");
+
+        List namesResult = phoneBook.printAllNames();
+
+        Assertions.assertEquals(namesExpected, namesResult);
     }
 }

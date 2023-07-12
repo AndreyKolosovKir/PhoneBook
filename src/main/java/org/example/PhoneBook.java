@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
@@ -30,5 +31,9 @@ public class PhoneBook {
             }
         }
         return number;
+    }
+
+    public List printAllNames (){
+        return null;
     }
 }
