@@ -9,5 +9,8 @@ public class Main {
         phoneBook.add("Karl1", 89995556688L, myPhoneBook);
         String name = phoneBook.findByNumber(89995556688L, myPhoneBook);
         System.out.println(name);
+        Long number = phoneBook.findByName("Karl1", myPhoneBook);
+        System.out.println(number);
+        phoneBook.printAllNames(myPhoneBook);
     }
 }

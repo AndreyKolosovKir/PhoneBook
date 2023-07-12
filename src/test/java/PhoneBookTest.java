@@ -8,14 +8,14 @@ import java.util.List;
 
 
 public class PhoneBookTest {
-
+    PhoneBook phoneBook = new PhoneBook();
+    protected String name = "Karl1";
+    protected long number = 89995556677L;
+    HashMap<String, Long> test = new HashMap<>();
 
     @Test
     public void testAdd() {
-        PhoneBook phoneBook = new PhoneBook();
-        String name = "Karl";
-        long number = 89995556677L;
-        HashMap<String, Long> test = new HashMap<>();
+
         test.put(name, number);
 
         int expected = test.size();
@@ -27,29 +27,22 @@ public class PhoneBookTest {
 
     @Test
     public void testFindByNumber() {
-        PhoneBook phoneBook = new PhoneBook();
-        String name1 = "Karl1";
-        long number1 = 89995556688L;
-        HashMap<String, Long> test = new HashMap<>();
-        phoneBook.add(name1, number1, test);
+
+        phoneBook.add(name, number, test);
 
         String expected = "Karl1";
 
-        String result = phoneBook.findByNumber(89995556688L, test);
+        String result = phoneBook.findByNumber(89995556677L, test);
 
         Assertions.assertEquals(expected, result);
     }
 
     @Test
     public void testFindByName() {
-        PhoneBook phoneBook = new PhoneBook();
-        String name1 = "Karl1";
-        long number1 = 89995556688L;
-        HashMap<String, Long> test = new HashMap<>();
-        phoneBook.add(name1, number1, test);
 
+        phoneBook.add(name, number, test);
 
-        Long expected = 89995556688L;
+        Long expected = 89995556677L;
 
         Long result = phoneBook.findByName("Karl1", test);
 
@@ -58,11 +51,8 @@ public class PhoneBookTest {
 
     @Test
     public void testPrintAllNames() {
-        PhoneBook phoneBook = new PhoneBook();
-        String name1 = "Karl1";
-        long number1 = 89995556688L;
-        HashMap<String, Long> test = new HashMap<>();
-        phoneBook.add(name1, number1, test);
+
+        phoneBook.add(name, number, test);
 
         List namesExpected = Arrays.asList("Karl1");
 
