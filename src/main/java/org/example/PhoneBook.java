@@ -1,12 +1,16 @@
 package org.example;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class PhoneBook {
-    protected HashMap<String, Long> myPhoneBook = new HashMap<>();
 
-    public int add(String name, long proneNumber) {
+    public int add(String name, long proneNumber, HashMap<String, Long> myPhoneBook) {
         myPhoneBook.put(name, proneNumber);
         return myPhoneBook.size();
+    }
+
+    public String findByNumber() {
+        return null;
     }
 }
